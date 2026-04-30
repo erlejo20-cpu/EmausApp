@@ -25,7 +25,7 @@ source.exclude_dirs = tests, bin, venv, APP-MOVIL-main
 
 # (list) Application requirements
 # IMPORTANT: Include flask and its dependencies
-requirements = python3,flask,werkzeug,jinja2,itsdangerous,click,setuptools,kivy
+requirements = python3,kivy==2.2.1,flask==2.2.5,werkzeug==2.3.7,jinja2,markupsafe,itsdangerous,click,hostpython3,setuptools
 
 # (str) Custom source folders for requirements
 # (list) Permissions
@@ -60,7 +60,7 @@ android.exclude_patterns = tests/*, Lib/test/*
 
 [buildozer]
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 1
+log_level = 2
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
 warn_on_root = 1
