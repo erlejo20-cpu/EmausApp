@@ -19,7 +19,7 @@ source.include_exts = py,png,jpg,kv,atlas,json,html,css,js
 
 # (list) Application requirements
 # IMPORTANT: Include flask and its dependencies
-requirements = python3,flask,werkzeug,jinja2,itsdangerous,click,setuptools
+requirements = python3,flask,werkzeug,jinja2,itsdangerous,click,setuptools,kivy
 
 # (str) Custom source folders for requirements
 # (list) Permissions

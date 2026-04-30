@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
-import json, os
+import json, os, threading
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -136,5 +136,21 @@ def ocr():
     return jsonify(rosario_data)
 
 if __name__ == "__main__":
-    # En Android es preferible desactivar el reloader para evitar reinicios infinitos del servicio
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    # Iniciamos Flask en un hilo separado
+    flask_thread = threading.Thread(target=lambda: app.run(host='0.0.0.0', port=5000, debug=False))
+    flask_thread.daemon = True
+    flask_thread.start()
+
+    # Iniciamos una interfaz básica de Kivy para Android
+    try:
+        from kivy.app import App
+        from kivy.uix.label import Label
+
+        class EmausApp(App):
+            def build(self):
+                return Label(text="Servidor Emaús Activo\nAccede mediante el navegador si es necesario.")
+        
+        EmausApp().run()
+    except ImportError:
+        # Fallback para ejecución local en PC sin Kivy
+        app.run(host='0.0.0.0', port=5000, debug=True)
