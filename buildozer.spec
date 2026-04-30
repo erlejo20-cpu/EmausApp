@@ -25,7 +25,7 @@ source.exclude_dirs = tests, bin, venv, APP-MOVIL-main, .github, .git
 
 # (list) Application requirements
 # IMPORTANT: Include flask and its dependencies
-requirements = python3,kivy==2.2.1,flask==2.2.5,werkzeug==2.3.7,jinja2,markupsafe,itsdangerous,click,hostpython3,setuptools
+requirements = python3,kivy==2.3.0,flask==2.2.5,jinja2,markupsafe,werkzeug==2.3.7,itsdangerous,click
 
 # (str) Custom source folders for requirements
 # (list) Permissions
@@ -45,6 +45,9 @@ android.minapi = 21
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 android.private_storage = True
+
+# (list) The Android architectures to build for
+android.archs = arm64-v8a
 
 # (str) Short name of the application
 name = EmausApp
