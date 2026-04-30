@@ -20,6 +20,9 @@ python.version = 3.10
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas,json,html,css,js
 
+# (list) List of directory to exclude (avoid redundant processing)
+source.exclude_dirs = tests, bin, venv, APP-MOVIL-main
+
 # (list) Application requirements
 # IMPORTANT: Include flask and its dependencies
 requirements = python3,flask,werkzeug,jinja2,itsdangerous,click,setuptools,kivy
@@ -52,9 +55,12 @@ name = EmausApp
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
 
+# (list) List of patterns to exclude from the APK (skips unnecessary tests)
+android.exclude_patterns = tests/*, Lib/test/*
+
 [buildozer]
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 2
+log_level = 1
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
 warn_on_root = 1
