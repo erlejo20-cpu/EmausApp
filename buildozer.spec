@@ -40,8 +40,8 @@ android.build_tools_version = 33.0.0
 # (int) Minimum API your APK will support.
 android.minapi = 21
 
-# (str) Android NDK version to use
-android.ndk = 25b
+# (str) Android NDK version to use (leave commented to let buildozer choose)
+# android.ndk = 25b
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 android.private_storage = True
