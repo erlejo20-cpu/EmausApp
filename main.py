@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
-import json, os, threading
+import json, os
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 

@@ -11,10 +11,10 @@ package.domain = org.emaus
 # (str) Source code where the main.py live
 source.dir = .
 
-# (str) Application versioning (method 1)
+# (str) Application versioning
 version = 0.1
 
-# (str) Python version to use for the application
+# (str) Python version to use
 python.version = 3.10
 
 # (list) Source files to include (let empty to include all the files)
