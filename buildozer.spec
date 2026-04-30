@@ -20,8 +20,8 @@ python.version = 3.10
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas,json,html,css,js
 
-# (list) List of directory to exclude (avoid redundant processing)
-source.exclude_dirs = tests, bin, venv, APP-MOVIL-main
+# (list) List of directory to exclude
+source.exclude_dirs = tests, bin, venv, APP-MOVIL-main, .github, .git
 
 # (list) Application requirements
 # IMPORTANT: Include flask and its dependencies
