@@ -21,7 +21,7 @@ jobs:
         run: |
           # Importante: Aseguramos que el PATH de pip esté disponible
           export PATH=$PATH:$HOME/.local/bin
-          buildozer android debug || buildozer android debug
+          yes | buildozer android debug
         
       - name: Subir APK como artefacto
         uses: actions/upload-artifact@v4
