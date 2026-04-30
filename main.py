@@ -136,4 +136,5 @@ def ocr():
     return jsonify(rosario_data)
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # En Android es preferible desactivar el reloader para evitar reinicios infinitos del servicio
+    app.run(host='0.0.0.0', port=5000, debug=False)
